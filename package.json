@@ -1,0 +1,44 @@
+{
+  "name": "@runly/azure-versioned-storage",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Upload a directory to Azure Blob Storage under a specified version number",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src webpack.config.js",
+    "build": "rimraf dist && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runlyio/azure-versioned-storage.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript",
+    "Azure",
+    "Storage",
+    "CDN"
+  ],
+  "author": "Runly LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/runlyio/azure-versioned-storage/issues"
+  },
+  "homepage": "https://github.com/runlyio/azure-versioned-storage#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@azure/storage-blob": "^12.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@runly/eslint-config": "^1.0.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
