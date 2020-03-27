@@ -1,5 +1,7 @@
 name: 'Azure Versioned Storage Upload'
 description: 'Upload a directory to Azure Blob Storage under a specified version number.'
+author: 'Runly LLC'
+
 inputs:
   storageSasUrl:
     description: 'The Blob service Shared Access Signature (SAS) URL'
@@ -13,6 +15,12 @@ inputs:
   sourceDir:
     description: 'The source directory of assets to upload.'
     required: true
+
 runs:
   using: 'node12'
   main: 'dist/action.js'
+
+branding:
+  icon: 'arrow-up-circle'
+  color: 'blue'
+  
