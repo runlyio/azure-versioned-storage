@@ -7,12 +7,12 @@ import { BlobServiceClient } from "@azure/storage-blob";
 const readDirAsync = util.promisify(fs.readdir);
 
 export default async function upload({
-	storageSasUrl,
+	connectionString,
 	version,
 	container: containerName,
 	sourceDir
 }) {
-	const blobClient = new BlobServiceClient(storageSasUrl);
+	const blobClient = BlobServiceClient.fromConnectionString(connectionString);
 
 	const container = blobClient.getContainerClient(containerName);
 

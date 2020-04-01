@@ -14,7 +14,7 @@ async function run() {
 		console.log(`Preparing to upload ${version} assets`);
 
 		await uploadToAzure({
-			storageSasUrl: core.getInput("storageSasUrl"),
+			connectionString: core.getInput("connectionString"),
 			version: core.getInput("version"),
 			container: core.getInput("container"),
 			sourceDir: core.getInput("sourceDir")

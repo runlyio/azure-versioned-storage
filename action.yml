@@ -3,8 +3,8 @@ description: 'Upload a directory to Azure Blob Storage under a specified version
 author: 'Runly LLC'
 
 inputs:
-  storageSasUrl:
-    description: 'The Blob service Shared Access Signature (SAS) URL'
+  connectionString:
+    description: 'The storage account connection string'
     required: true
   version:
     description: 'The version of the assets to upload.'

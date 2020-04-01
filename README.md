@@ -6,7 +6,7 @@ Upload a directory of assets to Azure Blob Storage under a specified version num
 
 ### Inputs
 
-* `storageSasUrl`: The Blob Service [Shared Access Signature (SAS)](https://docs.microsoft.com/en-us/rest/api/storageservices/delegate-access-with-shared-access-signature) URL.
+* `connectionString`: The storage account connection string.
 * `version`: The version of the assets to upload.
 * `container`: The blob container to upload assets into.
 * `sourceDir`: The source directory of assets to upload.
@@ -39,10 +39,10 @@ jobs:
       - run: npm run bundle
 
         # upload assets to azure storage
-      - uses: runlyio/azure-versioned-storage@v1
+      - uses: runlyio/azure-versioned-storage@v2
         with:
           sourceDir: dist
           version: v${{ steps.pkg.outputs.version }}
           container: mycontainername
-          storageSasUrl: ${{ secrets.STORAGE_SAS_URL }}
+          connectionString: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
 ```
