@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/runlyio/azure-versioned-storage#readme",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.2.6",
     "@azure/storage-blob": "^12.1.1"
   },
   "devDependencies": {
